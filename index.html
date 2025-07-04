@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuestas.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container" id="loginSection">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="loginUser" placeholder="Usuario">
+    <input type="password" id="loginPass" placeholder="Contraseña">
+    <button onclick="login()">Entrar</button>
+    <button onclick="showRegister()">Registrarse</button>
+  </div>
+
+  <div class="container hidden" id="registerSection">
+    <h2>Registro</h2>
+    <input type="text" id="regUser" placeholder="Nuevo Usuario">
+    <input type="password" id="regPass" placeholder="Nueva Contraseña">
+    <button onclick="register()">Crear Cuenta</button>
+    <button onclick="hideRegister()">Cancelar</button>
+  </div>
+
+  <div class="container hidden" id="appSection">
+    <h2>Crear Encuesta</h2>
+    <input type="text" id="pregunta" placeholder="Escribe tu pregunta">
+    <input type="text" id="respuesta" placeholder="Escribe la respuesta">
+    <button onclick="agregarPregunta()">Agregar Pregunta</button>
+
+    <h3 class="text-center">Preguntas Creadas</h3>
+    <div id="preguntasContainer"></div>
+
+    <h3 class="text-center">Responde Encuestas</h3>
+    <div id="responderContainer"></div>
+
+    <h3 class="text-center">Resultados</h3>
+    <canvas id="resultadosChart" width="400" height="300"></canvas>
+
+    <button onclick="logout()">Cerrar Sesión</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
